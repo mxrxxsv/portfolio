@@ -1,25 +1,171 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Inbox
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content [fullscreen]="true">
-  <ion-refresher slot="fixed" (ionRefresh)="refresh($event)">
-    <ion-refresher-content></ion-refresher-content>
-  </ion-refresher>
-  
-  <ion-header collapse="condense">
+<ion-menu side="end" contentId="main-content">
+  <ion-header>
     <ion-toolbar>
-      <ion-title size="large">
-        Inbox
-      </ion-title>
+      <ion-title class="ti">Portfolio</ion-title>
     </ion-toolbar>
   </ion-header>
-  
-  <ion-list>
-    <app-message *ngFor="let message of getMessages()" [message]="message"></app-message>
-  </ion-list>
-</ion-content>
+  <ion-content>
+    <ion-card>
+      <ion-img src="../../assets/oraxol.png"></ion-img>
+      <ion-card-content>
+        <ion-card-subtitle>
+          Portfolio 1
+        </ion-card-subtitle>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card class="tempt">
+      <ion-card-content>
+        <ion-card-subtitle> Portfolio 2 </ion-card-subtitle>
+      </ion-card-content>
+    </ion-card>     
+
+  </ion-content>
+</ion-menu>
+
+<div class="ion-page" id="main-content">
+  <ion-content>
+    <!--  -->
+    <!--  -->
+
+    <ion-header class="ion-padding-top">
+      <ion-img class="logo" src="../../assets/oraxol.png"></ion-img>
+      <ion-buttons side="end" class="menu">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+    </ion-header>
+
+    <div class="title">
+      <p class="ion-text-left">Hello! I'm</p>
+      <p class="ion-text-left t1">{{start_name}}</p>
+    </div>
+
+    <ion-card>
+      <ion-img src="../../assets/oraxol.png"></ion-img>
+    </ion-card>
+
+    <ion-grid>
+      <ion-col>
+        <ion-row>
+          <ion-card class="tempt">
+            <ion-card-content>
+              <ion-card-subtitle> Portfolio 1 </ion-card-subtitle>
+            </ion-card-content>
+          </ion-card>
+      
+          <ion-card class="tempt">
+            <ion-card-content>
+              <ion-card-subtitle> Portfolio 2 </ion-card-subtitle>
+            </ion-card-content>
+          </ion-card>      
+        </ion-row>
+      </ion-col>
+    </ion-grid>
+
+
+    <ion-card class="info">
+      <ion-card-header>
+        <ion-card-title class="ion-padding-top">Information</ion-card-title>
+        <!-- <ion-card-subtitle>Information</ion-card-subtitle> -->
+      </ion-card-header>
+      <ion-card-content>
+        <ion-list>
+          <ion-item>
+            <ion-thumbnail slot="start">
+              <ion-icon name="person-outline"></ion-icon>
+            </ion-thumbnail>
+            <ion-label>{{name}}</ion-label>
+          </ion-item>
+
+          <ion-item>
+            <ion-thumbnail slot="start">
+              <ion-icon name="mail-outline"></ion-icon>
+            </ion-thumbnail>
+            <ion-label>{{email}}</ion-label>
+          </ion-item>
+
+          <ion-item>
+            <ion-thumbnail slot="start">
+              <ion-icon name="call-outline"></ion-icon>
+            </ion-thumbnail>
+            <ion-label>{{phone}}</ion-label>
+          </ion-item>
+
+          <ion-item lines="none">
+            <ion-thumbnail slot="start">
+              <ion-icon name="male-female-outline"></ion-icon>
+            </ion-thumbnail>
+            <ion-label>{{gender}}</ion-label>
+          </ion-item>
+        </ion-list>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-button class="ion-padding edit" id="open-modal" expand="block">Edit Information</ion-button>
+    <ion-modal trigger="open-modal" (willDismiss)="onWillDismiss($event)">
+      <ng-template>
+        <ion-header>
+          <ion-toolbar>
+            <ion-buttons slot="start">
+              <ion-button (click)="cancel()">Cancel</ion-button>
+            </ion-buttons>
+            <ion-title>Edit</ion-title>
+            <ion-buttons slot="end">
+              <ion-button (click)="confirm()" [strong]="true">Confirm</ion-button>
+            </ion-buttons>
+          </ion-toolbar>
+        </ion-header>
+        <ion-content class="ion-padding edit-con">
+          <ion-item class="ed">
+            <ion-input
+              label="Name"
+              labelPlacement="stacked"
+              type="text"
+              placeholder="Your name"
+              [(ngModel)]="name"
+            ></ion-input>
+          </ion-item>
+
+          <ion-item class="ed">
+            <ion-input
+              label="Email"
+              labelPlacement="stacked"
+              type="text"
+              placeholder="Your email"
+              [(ngModel)]="email"
+            ></ion-input>
+          </ion-item>
+
+          <ion-item class="ed">
+            <ion-input
+              label="Phone"
+              labelPlacement="stacked"
+              type="text"
+              placeholder="Your email"
+              [(ngModel)]="phone"
+            ></ion-input>
+          </ion-item>
+
+          <ion-item class="ed">
+            <ion-radio-group [(ngModel)]="gender" (ionChange)="onGenderChange($event)">
+              <ion-radio value="Male" aria-label="Custom checkbox that is checked"> Male </ion-radio>
+              <ion-radio value="Female" aria-label="Custom checkbox"> Female</ion-radio>
+            </ion-radio-group>
+          </ion-item>
+
+        </ion-content>
+      </ng-template>
+    </ion-modal>
+
+    <!--  -->
+    <!--  -->
+  </ion-content>
+
+
+  <ion-footer>
+    <ion-toolbar>
+    </ion-toolbar>
+  </ion-footer>
+</div>
+
+
