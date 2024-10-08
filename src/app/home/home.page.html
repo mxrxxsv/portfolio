@@ -54,7 +54,7 @@
 
     <ion-card class="info">
       <ion-card-header>
-        <ion-card-title class="ion-padding-top">Information</ion-card-title>
+        <ion-card-title class="ion-padding-top" color="light">Information</ion-card-title>
       </ion-card-header>
       <ion-card-content>
         <ion-list>
@@ -89,7 +89,7 @@
       </ion-card-content>
     </ion-card>
 
-    <ion-button color="dark" class="ion-padding edit" id="open-modal" expand="block"
+    <ion-button color="light" class="ion-padding edit" id="open-modal" expand="block"
       >Edit Information</ion-button
     >
     <ion-modal trigger="open-modal" (willDismiss)="onWillDismiss($event)">
@@ -162,7 +162,7 @@
       <p class="ion-text-left t1">Project Designs</p>
     </div>
 
-    <ion-card *ngFor="let design of designs">
+    <ion-card *ngFor="let design of designs" color="dark">
       <ion-img [src]="design.img"></ion-img>
       <ion-card-content>
         <ion-card-subtitle>{{design.name}}</ion-card-subtitle>
