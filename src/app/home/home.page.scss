@@ -11,15 +11,23 @@ ion-toolbar{
 .logo{
   height: 50px;
   width: 50x;
-  justify-content: start;
-  align-items: start;
-  padding-right: 280px;
+ 
+}
+.ali{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding-left: 24px;
+
 }
 
 .menu{
+  justify-content: end;
   position: relative;
   bottom: 45px;
-  left: 330px;
+  margin-right: 10px;
+  // left: 330px;
   // border: 1px solid #ffffff;
   // border-radius: 20px;
 }
@@ -121,15 +129,16 @@ ion-icon{
 }
 
 .edit {
+  --border-radius: 10px;
   position: relative;
-  top: -30px;
+  top: -25px;
   --color: #161616;
   --background: #ffffff;
   font-family: "Raleway", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
-  width: 200px;
+  width: 250px;
 }
 
 .ed{
@@ -170,4 +179,12 @@ ion-radio.ios::part(container) {
 
 .radio-checked.ios::part(container) {
   border-color: #161616;
+}
+
+.font{
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: lighter;
+  font-style: normal;
+  font-size: 18px;
 }
