@@ -25,8 +25,10 @@
     <!--  -->
     <!--  -->
 
-    <ion-header class="ion-padding-top">
+    <ion-header class="ion-padding-top ion-no-border">
+      <div class="ali">
       <ion-img class="logo" src="../../assets/oraxol.png"></ion-img>
+    </div>
       <ion-buttons side="end" class="menu">
         <ion-menu-button></ion-menu-button>
       </ion-buttons>
@@ -165,7 +167,7 @@
     <ion-card *ngFor="let design of designs" color="dark">
       <ion-img [src]="design.img"></ion-img>
       <ion-card-content>
-        <ion-card-subtitle>{{design.name}}</ion-card-subtitle>
+        <ion-card-subtitle class="font">{{design.name}}</ion-card-subtitle>
       </ion-card-content>
     </ion-card>
 
