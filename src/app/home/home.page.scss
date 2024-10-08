@@ -1,5 +1,11 @@
+
 ion-toolbar{
   --background:#161616;
+  --color: #ffffff;
+}
+
+.white{
+  color: #ffffff;
 }
 
 .logo{
@@ -64,6 +70,7 @@ ion-content{
   font-optical-sizing: auto;
   font-weight: 300;
   font-style: normal;
+  color: #ffffff;
 }
 
 .t1{
