@@ -1,36 +1,40 @@
 <ion-menu side="end" contentId="main-content">
   <ion-header>
-    <ion-toolbar>
-      <ion-title class="ti">Portfolio</ion-title>
+    <ion-toolbar [ngClass]="bg" class="ion-no-border">
+      <ion-title class="ti">Background</ion-title>
     </ion-toolbar>
   </ion-header>
-  <ion-content>
-    <ion-card>
-      <ion-img src="../../assets/oraxol.png"></ion-img>
-      <ion-card-content>
-        <ion-card-subtitle> Portfolio 1 </ion-card-subtitle>
-      </ion-card-content>
-    </ion-card>
-
-    <ion-card>
-      <ion-card-content>
-        <ion-card-subtitle> Portfolio 2 </ion-card-subtitle>
-      </ion-card-content>
-    </ion-card>
+  <ion-content [ngClass]="bg">
+    <ion-list class="in">
+      <ion-item>
+        <ion-toggle
+          color="dark"
+          (ionChange)="toggleBG()"
+          (ionChange)="toggleStyleBinding()"
+          [checked]="withBg"
+          >Background</ion-toggle
+        >
+      </ion-item>
+    </ion-list>
   </ion-content>
 </ion-menu>
 
 <div class="ion-page" id="main-content">
-  <ion-content>
+  <ion-content [ngClass]="bg">
     <!--  -->
     <!--  -->
 
     <ion-header class="ion-padding-top ion-no-border">
       <div class="ali">
-      <ion-img class="logo" src="../../assets/oraxol.png"></ion-img>
-    </div>
+        <ion-img class="logo" src="../../assets/oraxol.png"></ion-img>
+      </div>
       <ion-buttons side="end" class="menu">
-        <ion-menu-button></ion-menu-button>
+        <ion-menu-button>
+          <ion-icon
+            [ngStyle]="isWithStyleBind? styleSetA: styleSetB"
+            name="contrast-outline"
+          ></ion-icon>
+        </ion-menu-button>
       </ion-buttons>
     </ion-header>
 
@@ -38,25 +42,32 @@
       <ion-img src="../../assets/marius.jpg"></ion-img>
     </ion-card>
 
-    <div class="title">
-      <p class="ion-text-left">Hello! I'm</p>
-      <p class="ion-text-left t1">{{start_name}}</p>
-    </div>
+          <div [ngClass]="bg" class="title">
+            <p class="ion-text-left">Hello! I'm</p>
+            <p class="ion-text-left t1">{{start_name}}</p>
+          </div>
+      
+          <div class="social">
+              <ion-icon [ngStyle]="isWithStyleBind? styleSetA: styleSetB" class="lock" name="logo-facebook"></ion-icon>
+              <ion-icon [ngStyle]="isWithStyleBind? styleSetA: styleSetB" class="lock" name="logo-instagram"></ion-icon>
+          </div>
+      
 
-    <div class="title">
+    <div [ngClass]="bg" class="title t2">
       <p class="ion-text-left">A BSIT Student at</p>
       <p class="ion-text-left t1">{{campus}}</p>
-      <p class="ion-text-left f2">3rd year student</p>
-    </div>
+      <p class="ion-text-left f2">{{year}} year student</p>
+    </div> 
 
-    <ion-card>
-      <!-- <video class="vid" src="../../assets/matchfit.mp4" controls="controls" autoplay="autoplay"  [muted]="true"></video> -->
-      <ion-img src="../../assets/oraxol.png"></ion-img>
+    <ion-card class="ion-padding-bottom prof">
+      <ion-img [src]="picture"></ion-img>
     </ion-card>
 
-    <ion-card class="info">
+    <ion-card [ngClass]="bg" class="info">
       <ion-card-header>
-        <ion-card-title class="ion-padding-top" color="light">Information</ion-card-title>
+        <ion-card-title [ngClass]="bg" class="ion-padding-top black t1"
+          >Information</ion-card-title
+        >
       </ion-card-header>
       <ion-card-content>
         <ion-list>
@@ -91,8 +102,7 @@
       </ion-card-content>
     </ion-card>
 
-    <ion-button color="light" class="ion-padding edit" id="open-modal" expand="block"
-      >Edit Information</ion-button
+    <ion-button class="ion-padding edit" id="open-modal" expand="block">Edit Information</ion-button
     >
     <ion-modal trigger="open-modal" (willDismiss)="onWillDismiss($event)">
       <ng-template>
@@ -161,21 +171,22 @@
     </ion-modal>
 
     <div class="title ion-padding-top">
-      <p class="ion-text-left t1">Project Designs</p>
+      <p class="t1">Project Designs</p>
     </div>
 
-    <ion-card *ngFor="let design of designs" color="dark">
-      <ion-img [src]="design.img"></ion-img>
+    <ion-card [ngClass]="bg" class="black" *ngFor="let design of designs">
+      <ion-img [src]="design.img" (click)="route(design.router)"></ion-img>
       <ion-card-content>
-        <ion-card-subtitle class="font">{{design.name}}</ion-card-subtitle>
+        <ion-card-title
+          [ngStyle]="isWithStyleBind? styleSetA: styleSetB"
+          class="font black"
+        >
+          {{design.name}}</ion-card-title
+        >
       </ion-card-content>
     </ion-card>
 
     <!--  -->
     <!--  -->
   </ion-content>
-
-  <ion-footer>
-    <ion-toolbar> </ion-toolbar>
-  </ion-footer>
 </div>
