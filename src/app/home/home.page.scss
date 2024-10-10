@@ -4,106 +4,13 @@ ion-toolbar{
   --color: #ffffff;
 }
 
-.white{
-  color: #ffffff;
-}
-
-.logo{
-  height: 50px;
-  width: 50x;
- 
-}
-.ali{
-  display: flex;
-  align-items: start;
-  padding-left: 24px;
-
-}
-
-.menu{
-  justify-content: end;
-  position: relative;
-  bottom: 45px;
-  margin-right: 10px;
-  // left: 330px;
-  // border: 1px solid #ffffff;
-  // border-radius: 20px;
-}
-
-.t1{
-  font-family: "Raleway", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.f2{
-  position: relative;
-  top: -40px;
-  font-size: 18px;
-  font-family: "Raleway", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: lighter;
-  font-style: normal;
-}
-
-.profile{
-  height: 50px;
-  width: 50px;
-  border-radius: 100%;
-  margin-left: 24px;
-}
-
-.vid{
-  height: 100%;
-  width: 100%;
-}
-
 ion-menu-button{
   --color:#ffffff;
 }
 
 ion-content{
   --background:#161616 ;
-}
-
-.title{
-  position: relative;
-  top: 10px;
-  left: 27px;
-  font-size: 30px;
-  font-family: "Raleway", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 300;
-  font-style: normal;
-  color: #ffffff;
-}
-
-.t1{
-  position: relative;
-  top: -24px;
-}
-
-.tempt {
-  padding: 8px;
-  height: 350px;
-  width: 150px;
-  // border: 1px solid #ffffff;
-  // border-radius: 20px;
-  --background: #161616;
-}
-
-ion-grid{
-  position: relative;
-  left: 8px;
-}
-
-.info{
-  --background: #161616;
-  font-family: "Raleway", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 300;
-  font-style: normal;
+  --color:#ffffff;
 }
 
 ion-list{
@@ -126,37 +33,9 @@ ion-icon{
   width: 25px;
 }
 
-.edit {
-  --border-radius: 10px;
-  position: relative;
-  top: -25px;
-  --color: #161616;
-  --background: #ffffff;
-  font-family: "Raleway", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-  width: 250px;
-}
-
-.ed{
-  padding-top: 8px;
-  margin-top: 24px;
-  font-family: "Raleway", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 300;
-  font-style: normal;
-  font-size: 18px;
-}
-
-.edit-con{
-  --background: #ffffff;
-}
-
 ion-radio {
   --border-radius: 4px;
   --inner-border-radius: 4px;
-
   --color: #161616;
   --color-checked: #161616;
   font-family: "Raleway", sans-serif;
@@ -175,6 +54,122 @@ ion-radio.ios::part(container) {
   border-radius: 4px;
 }
 
+
+.black{
+  --background: #161616;
+  --color: #ffffff;
+}
+
+.logo{
+  height: 50px;
+  width: 50x;
+ 
+}
+
+.ali{
+  display: flex;
+  align-items: start;
+  padding-left: 24px;
+
+}
+
+.menu{
+  justify-content: end;
+  position: relative;
+  bottom: 60px;
+  margin-right: 10px;
+}
+
+.t1{
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.f2{
+  position: relative;
+  top: -40px;
+  font-size: 18px;
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: normal;
+  font-style: normal;
+}
+
+.profile{
+  height: 50px;
+  width: 50px;
+  border-radius: 100%;
+  margin-left: 24px;
+}
+
+.vid{
+  height: 100%;
+  width: 100%;
+}
+
+
+.title{
+  position: relative;
+  top: 10px;
+  left: 27px;
+  font-size: 30px;
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.t1{
+  position: relative;
+  top: -24px;
+}
+
+.tempt {
+  padding: 8px;
+  height: 350px;
+  width: 150px;
+  --background: #161616;
+}
+
+.info{
+  --background: #161616;
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.edit {
+  --border-radius: 10px;
+  // position: relative;
+  // top: -25px;
+  --color: #161616;
+  --background: #ffffff;
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  width: 250px;
+  --border-color:#161616;
+  margin: 12px;
+}
+
+.ed{
+  padding-top: 8px;
+  margin-top: 24px;
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 18px;
+}
+
+.edit-con{
+  --background: #ffffff;
+}
+
 .radio-checked.ios::part(container) {
   border-color: #161616;
 }
@@ -182,7 +177,41 @@ ion-radio.ios::part(container) {
 .font{
   font-family: "Raleway", sans-serif;
   font-optical-sizing: auto;
-  font-weight: lighter;
+  font-weight: normal;
   font-style: normal;
   font-size: 18px;
+}
+
+.in{
+  border: 1px solid #252525;
+  border-radius: 20px;
+  margin: 10px;
+  color: var(--ion-color-dark);
+}
+
+.withBackground {
+  --background: var(--ion-color-light);
+  --color: #161616;
+}
+
+.social{
+  display: flex;
+  flex-direction: column;
+  // align-items: flex-end;
+  // margin-right: 12px;
+  position: absolute;
+  left: 300px;
+  top: 210px;
+}
+
+.lock{
+  margin-bottom: 10px;
+  border: 1px solid #ffffff;
+  border-radius: 10px;
+  padding: 8px;
+}
+
+.prof{
+  height: 405px;
+  width: auto;
 }
